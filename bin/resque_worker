@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+require File.expand_path('../../config/application', __FILE__)
+Rails.application.require_environment!
+
+class ResqueWorkerDaemon < DaemonSpawn::Base
+  def start(args)
+    if args.length == 0
+      args = ["crawler"]
+    end
+    queues = [args.first]
+    @worker = Resque::Worker.new(*queues)
+    @worker.term_timeout = 4.0
+    @worker.work(5)
+  end
+
+  def stop
+    @worker.try(:shutdown)
+  end
+end
+
+ResqueWorkerDaemon.spawn!({
+  :working_dir => Rails.root,
+  :pid_file => File.join(Rails.root, 'tmp', 'pids', 'crawler.pid'),
+  :log_file => File.join(Rails.root, 'log', 'crawler.log'),
+  :sync_log => true,
+  :singleton => true
+})

@@ -1,0 +1,37 @@
+<%= form_for(@deploy_history) do |f| %>
+  <% if @deploy_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@deploy_history.errors.count, "error") %> prohibited this deploy_history from being saved:</h2>
+
+      <ul>
+      <% @deploy_history.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ident_code %><br>
+    <%= f.text_field :ident_code %>
+  </div>
+  <div class="field">
+    <%= f.label :action_time %><br>
+    <%= f.time_select :action_time %>
+  </div>
+  <div class="field">
+    <%= f.label :agent_id %><br>
+    <%= f.number_field :agent_id %>
+  </div>
+  <div class="field">
+    <%= f.label :portal_id %><br>
+    <%= f.number_field :portal_id %>
+  </div>
+  <div class="field">
+    <%= f.label :resonator_level %><br>
+    <%= f.number_field :resonator_level %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

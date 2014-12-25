@@ -1,0 +1,2 @@
+module DestroyeHistoriesHelper
+end

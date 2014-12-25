@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ident code:</strong>
+  <%= @destroye_history.ident_code %>
+</p>
+
+<p>
+  <strong>Action time:</strong>
+  <%= @destroye_history.action_time %>
+</p>
+
+<p>
+  <strong>Agent:</strong>
+  <%= @destroye_history.agent_id %>
+</p>
+
+<p>
+  <strong>Portal:</strong>
+  <%= @destroye_history.portal_id %>
+</p>
+
+<p>
+  <strong>Resonator level:</strong>
+  <%= @destroye_history.resonator_level %>
+</p>
+
+<%= link_to 'Edit', edit_destroye_history_path(@destroye_history) %> |
+<%= link_to 'Back', destroye_histories_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ident code:</strong>
+  <%= @deploy_history.ident_code %>
+</p>
+
+<p>
+  <strong>Action time:</strong>
+  <%= @deploy_history.action_time %>
+</p>
+
+<p>
+  <strong>Agent:</strong>
+  <%= @deploy_history.agent_id %>
+</p>
+
+<p>
+  <strong>Portal:</strong>
+  <%= @deploy_history.portal_id %>
+</p>
+
+<p>
+  <strong>Resonator level:</strong>
+  <%= @deploy_history.resonator_level %>
+</p>
+
+<%= link_to 'Edit', edit_deploy_history_path(@deploy_history) %> |
+<%= link_to 'Back', deploy_histories_path %>

@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require File.expand_path('../../config/application', __FILE__)
+Rails.application.require_environment!
+
+para_hash = {"from_time" => (Time.now - 60*60*ENV["CROWLER_CYCLE_HOUR"].to_i).to_s,"to_time" => Time.now.to_s}
+Resque.enqueue(LoginIngressintel, para_hash)

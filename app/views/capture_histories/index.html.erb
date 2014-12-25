@@ -1,0 +1,33 @@
+<h1>Listing capture_histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ident code</th>
+      <th>Action time</th>
+      <th>Agent</th>
+      <th>Portal</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @capture_histories.each do |capture_history| %>
+      <tr>
+        <td><%= capture_history.ident_code %></td>
+        <td><%= capture_history.action_time %></td>
+        <td><%= capture_history.agent_id %></td>
+        <td><%= capture_history.portal_id %></td>
+        <td><%= link_to 'Show', capture_history %></td>
+        <td><%= link_to 'Edit', edit_capture_history_path(capture_history) %></td>
+        <td><%= link_to 'Destroy', capture_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Capture history', new_capture_history_path %>

@@ -1,0 +1,11 @@
+defaults: &defaults
+    team:
+      enlightened: ENLIGHTENED
+      resistance: RESISTANCE
+
+development:
+  <<: *defaults
+test:
+  <<: *defaults
+production:
+  <<: *defaults

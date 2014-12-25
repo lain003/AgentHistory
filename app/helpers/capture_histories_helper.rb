@@ -1,0 +1,2 @@
+module CaptureHistoriesHelper
+end

@@ -1,0 +1,35 @@
+<h1>Listing destroye_histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ident code</th>
+      <th>Action time</th>
+      <th>Agent</th>
+      <th>Portal</th>
+      <th>Resonator level</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @destroye_histories.each do |destroye_history| %>
+      <tr>
+        <td><%= destroye_history.ident_code %></td>
+        <td><%= destroye_history.action_time %></td>
+        <td><%= destroye_history.agent_id %></td>
+        <td><%= destroye_history.portal_id %></td>
+        <td><%= destroye_history.resonator_level %></td>
+        <td><%= link_to 'Show', destroye_history %></td>
+        <td><%= link_to 'Edit', edit_destroye_history_path(destroye_history) %></td>
+        <td><%= link_to 'Destroy', destroye_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Destroye history', new_destroye_history_path %>

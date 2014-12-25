@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  latE6: 1
+  lngE6: 1
+  address: MyString
+  name: MyString
+
+two:
+  latE6: 1
+  lngE6: 1
+  address: MyString
+  name: MyString

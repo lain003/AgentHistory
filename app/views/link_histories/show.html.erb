@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ident code:</strong>
+  <%= @link_history.ident_code %>
+</p>
+
+<p>
+  <strong>Action time:</strong>
+  <%= @link_history.action_time %>
+</p>
+
+<p>
+  <strong>Agent:</strong>
+  <%= @link_history.agent_id %>
+</p>
+
+<p>
+  <strong>To portal:</strong>
+  <%= @link_history.to_portal_id %>
+</p>
+
+<p>
+  <strong>From portal:</strong>
+  <%= @link_history.from_portal_id %>
+</p>
+
+<%= link_to 'Edit', edit_link_history_path(@link_history) %> |
+<%= link_to 'Back', link_histories_path %>

@@ -1,0 +1,35 @@
+<h1>Listing link_histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ident code</th>
+      <th>Action time</th>
+      <th>Agent</th>
+      <th>To portal</th>
+      <th>From portal</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @link_histories.each do |link_history| %>
+      <tr>
+        <td><%= link_history.ident_code %></td>
+        <td><%= link_history.action_time %></td>
+        <td><%= link_history.agent_id %></td>
+        <td><%= link_history.to_portal_id %></td>
+        <td><%= link_history.from_portal_id %></td>
+        <td><%= link_to 'Show', link_history %></td>
+        <td><%= link_to 'Edit', edit_link_history_path(link_history) %></td>
+        <td><%= link_to 'Destroy', link_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Link history', new_link_history_path %>

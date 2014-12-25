@@ -1,0 +1,2 @@
+module LinkHistoriesHelper
+end

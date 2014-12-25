@@ -1,0 +1,35 @@
+<h1>Listing deploy_histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ident code</th>
+      <th>Action time</th>
+      <th>Agent</th>
+      <th>Portal</th>
+      <th>Resonator level</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deploy_histories.each do |deploy_history| %>
+      <tr>
+        <td><%= deploy_history.ident_code %></td>
+        <td><%= deploy_history.action_time %></td>
+        <td><%= deploy_history.agent_id %></td>
+        <td><%= deploy_history.portal_id %></td>
+        <td><%= deploy_history.resonator_level %></td>
+        <td><%= link_to 'Show', deploy_history %></td>
+        <td><%= link_to 'Edit', edit_deploy_history_path(deploy_history) %></td>
+        <td><%= link_to 'Destroy', deploy_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Deploy history', new_deploy_history_path %>

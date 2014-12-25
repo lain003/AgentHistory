@@ -1,0 +1,37 @@
+<%= form_for(@link_history) do |f| %>
+  <% if @link_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@link_history.errors.count, "error") %> prohibited this link_history from being saved:</h2>
+
+      <ul>
+      <% @link_history.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ident_code %><br>
+    <%= f.text_field :ident_code %>
+  </div>
+  <div class="field">
+    <%= f.label :action_time %><br>
+    <%= f.time_select :action_time %>
+  </div>
+  <div class="field">
+    <%= f.label :agent_id %><br>
+    <%= f.number_field :agent_id %>
+  </div>
+  <div class="field">
+    <%= f.label :to_portal_id %><br>
+    <%= f.number_field :to_portal_id %>
+  </div>
+  <div class="field">
+    <%= f.label :from_portal_id %><br>
+    <%= f.number_field :from_portal_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

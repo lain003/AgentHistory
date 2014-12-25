@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ident code:</strong>
+  <%= @capture_history.ident_code %>
+</p>
+
+<p>
+  <strong>Action time:</strong>
+  <%= @capture_history.action_time %>
+</p>
+
+<p>
+  <strong>Agent:</strong>
+  <%= @capture_history.agent_id %>
+</p>
+
+<p>
+  <strong>Portal:</strong>
+  <%= @capture_history.portal_id %>
+</p>
+
+<%= link_to 'Edit', edit_capture_history_path(@capture_history) %> |
+<%= link_to 'Back', capture_histories_path %>

@@ -1,0 +1,33 @@
+<h1>Listing portals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Late6</th>
+      <th>Lnge6</th>
+      <th>Address</th>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @portals.each do |portal| %>
+      <tr>
+        <td><%= portal.latE6 %></td>
+        <td><%= portal.lngE6 %></td>
+        <td><%= portal.address %></td>
+        <td><%= portal.name %></td>
+        <td><%= link_to 'Show', portal %></td>
+        <td><%= link_to 'Edit', edit_portal_path(portal) %></td>
+        <td><%= link_to 'Destroy', portal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Portal', new_portal_path %>

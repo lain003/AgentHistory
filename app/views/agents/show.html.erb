@@ -1,0 +1,5 @@
+<% @kaminari_histories.histories.each do |history| %>
+  <%= show_history(history) %>
+<% end %>
+
+<%= paginate @kaminari_histories %>
