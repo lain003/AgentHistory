@@ -63,11 +63,12 @@ gem 'whenever', :require => false
 gem "watir"
 gem "watir-webdriver"
 gem "headless"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
