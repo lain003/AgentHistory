@@ -36,7 +36,6 @@ gem 'therubyracer'
 
 group :test, :development do
   gem "pry"
-  gem "pry-debugger"
   gem 'pry-rails'
   gem 'pry-doc'
 
